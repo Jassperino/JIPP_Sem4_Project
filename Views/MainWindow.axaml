@@ -17,7 +17,7 @@
     
     <Grid ColumnDefinitions="1*,1*,1*" ShowGridLines="True" RowDefinitions="1*,1*,1*">
         <Button Name="ClickBtn" Click="ClickBtn_Clicked" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Background="Aquamarine" FontWeight="Bold" FontSize="30">Wyświetl dane</Button>
-        <TextBlock Name="CounterTxt" Grid.Column="1" Grid.Row="2" FontWeight="Bold" HorizontalAlignment="Center" Text="{Binding Path=ResultLabel}"></TextBlock>
+        <TextBlock Name="CounterTxt" Grid.Column="2" Grid.Row="1" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Path=ResultLabel}"></TextBlock>
     </Grid>
     
 

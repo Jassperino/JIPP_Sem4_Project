@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using JIPP_Projekt_Sem4.Models;
 using JIPP_Projekt.Data;
@@ -16,15 +17,14 @@ public partial class MainWindowViewModel : ViewModelBase
 
     public ObservableCollection<User> Users { get; } = [];
 
-    public void UpdateUsers()
+    public async Task UpdateUsersAsync()
     {
-        using var dbContext = new SchoolDbContext();
-        
-        IQueryable<User> users = dbContext.Users.AsQueryable();
+        await using var dbContext = new SchoolDbContext();
 
-        users = users.OrderBy(s => s.Username);
-        
-        var usersData = users.ToList();
+        var usersData = await dbContext.Users
+            .AsNoTracking()
+            .OrderBy(s => s.Username)
+            .ToListAsync();
         
         Users.Clear();
         
@@ -33,7 +33,7 @@ public partial class MainWindowViewModel : ViewModelBase
         foreach (var user in usersData)
         {
             Users.Add(user);
-            sb.AppendLine($"Id: {user.Id}, Username: {user.Username}");
+            sb.AppendLine($"Id: {user.Id}, Username: {user.Username}, Password: {user.Password}");
         }
 
         ResultLabel = sb.ToString();

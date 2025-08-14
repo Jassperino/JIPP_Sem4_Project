@@ -13,13 +13,13 @@ public partial class MainWindow : Window
         InitializeComponent();
     }
 
-    private void ClickBtn_Clicked(object? sender, RoutedEventArgs e)
+    private async void ClickBtn_Clicked(object? sender, RoutedEventArgs e)
     {
         
         if (DataContext is not MainWindowViewModel vm)
             throw new InvalidOperationException("DataContext is not MainWindowViewModel");
 
-        vm.UpdateUsers();
+      await  vm.UpdateUsersAsync();
     }
     
 }
