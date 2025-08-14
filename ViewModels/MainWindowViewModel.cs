@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Text;
 using CommunityToolkit.Mvvm.ComponentModel;
 using JIPP_Projekt_Sem4.Models;
 using JIPP_Projekt.Data;
@@ -26,13 +27,16 @@ public partial class MainWindowViewModel : ViewModelBase
         var usersData = users.ToList();
         
         Users.Clear();
+        
+        var sb = new StringBuilder();
 
         foreach (var user in usersData)
         {
             Users.Add(user);
+            sb.AppendLine($"Id: {user.Id}, Username: {user.Username}");
         }
 
-        ResultLabel = users.ToQueryString();
+        ResultLabel = sb.ToString();
     }
 
 
