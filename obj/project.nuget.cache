@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kmaqjLvUCpQ=",
+  "dgSpecHash": "9w+YB8vdRp8=",
   "success": true,
   "projectFilePath": "A:\\Users\\Jasper\\RiderProjects\\JIPP_Projekt_Sem4\\JIPP_Projekt_Sem4\\JIPP_Projekt_Sem4.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "A:\\Users\\Jasper\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.22045.20230930\\avalonia.angle.windows.natives.2.1.22045.20230930.nupkg.sha512",
     "A:\\Users\\Jasper\\.nuget\\packages\\avalonia.buildservices\\0.0.31\\avalonia.buildservices.0.0.31.nupkg.sha512",
     "A:\\Users\\Jasper\\.nuget\\packages\\avalonia.controls.colorpicker\\11.3.0\\avalonia.controls.colorpicker.11.3.0.nupkg.sha512",
+    "A:\\Users\\Jasper\\.nuget\\packages\\avalonia.controls.datagrid\\11.3.0\\avalonia.controls.datagrid.11.3.0.nupkg.sha512",
     "A:\\Users\\Jasper\\.nuget\\packages\\avalonia.desktop\\11.3.0\\avalonia.desktop.11.3.0.nupkg.sha512",
     "A:\\Users\\Jasper\\.nuget\\packages\\avalonia.diagnostics\\11.3.0\\avalonia.diagnostics.11.3.0.nupkg.sha512",
     "A:\\Users\\Jasper\\.nuget\\packages\\avalonia.fonts.inter\\11.3.0\\avalonia.fonts.inter.11.3.0.nupkg.sha512",

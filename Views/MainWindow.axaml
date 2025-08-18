@@ -15,9 +15,11 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
     
-    <Grid ColumnDefinitions="1*,1*,1*" ShowGridLines="True" RowDefinitions="1*,1*,1*">
-        <Button Name="ClickBtn" Click="ClickBtn_Clicked" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Background="Aquamarine" FontWeight="Bold" FontSize="30">Wyświetl dane</Button>
-        <TextBlock Name="CounterTxt" Grid.Column="2" Grid.Row="1" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Path=ResultLabel}"></TextBlock>
+    <Grid ColumnDefinitions="1*,1*,1*,1*" ShowGridLines="True" RowDefinitions="1*,1*,1*">
+        <Button Name="ClickBtn" Click="ClickBtn_Clicked" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Background="Aquamarine" FontWeight="Bold" FontSize="20">Wyświetl użytkowników</Button>
+        <Button Name="CryptoBtn" Click="CryptoBtn_Clicked" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" Background="Aquamarine" FontWeight="Bold" FontSize="20">Wyświetl kryptowaluty</Button>
+        <DataGrid Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" ItemsSource="{Binding DisplayItems}" AutoGenerateColumns="True" CanUserResizeColumns="True" />
+
     </Grid>
     
 

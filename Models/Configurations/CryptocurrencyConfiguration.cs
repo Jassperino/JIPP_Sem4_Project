@@ -8,7 +8,6 @@ public class CryptocurrencyConfiguration : IEntityTypeConfiguration<Cryptocurren
     public void Configure(EntityTypeBuilder<Cryptocurrency> builder)
     {
         builder.HasKey(x => x.Id);
-        builder.HasIndex(x => x.UserId).IsUnique();
         builder.HasOne(x => x.User)
             .WithOne(u => u.Cryptocurrency)
             .HasForeignKey<Cryptocurrency>(x => x.UserId);

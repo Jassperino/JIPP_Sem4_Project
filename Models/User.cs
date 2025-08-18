@@ -12,5 +12,6 @@ public class User
     public List<UserGroup> Groups { get; } = [];
     
     public Cryptocurrency? Cryptocurrency { get; set; }
+    public override string ToString() => Username;
 
 }

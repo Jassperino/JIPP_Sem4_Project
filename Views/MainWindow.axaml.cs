@@ -19,7 +19,15 @@ public partial class MainWindow : Window
         if (DataContext is not MainWindowViewModel vm)
             throw new InvalidOperationException("DataContext is not MainWindowViewModel");
 
-      await  vm.UpdateUsersAsync();
+        await vm.UpdateUsersAsync();
+    }
+
+    private async void CryptoBtn_Clicked(object? sender, RoutedEventArgs e)
+    {
+        if (DataContext is not MainWindowViewModel vm)
+            throw new InvalidOperationException("DataContext is not MainWindowViewModel");
+
+        await vm.UpdateCryptocurrenciesAsync();
     }
     
 }
