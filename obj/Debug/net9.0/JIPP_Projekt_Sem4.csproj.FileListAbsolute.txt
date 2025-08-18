@@ -198,10 +198,10 @@ A:\Users\Jasper\RiderProjects\JIPP_Projekt_Sem4\JIPP_Projekt_Sem4\obj\Debug\net9
 A:\Users\Jasper\RiderProjects\JIPP_Projekt_Sem4\JIPP_Projekt_Sem4\obj\Debug\net9.0\JIPP_Projekt_Sem4.AssemblyInfoInputs.cache
 A:\Users\Jasper\RiderProjects\JIPP_Projekt_Sem4\JIPP_Projekt_Sem4\obj\Debug\net9.0\JIPP_Projekt_Sem4.AssemblyInfo.cs
 A:\Users\Jasper\RiderProjects\JIPP_Projekt_Sem4\JIPP_Projekt_Sem4\obj\Debug\net9.0\JIPP_Projekt_Sem4.csproj.CoreCompileInputs.cache
+A:\Users\Jasper\RiderProjects\JIPP_Projekt_Sem4\JIPP_Projekt_Sem4\obj\Debug\net9.0\JIPP_Projekt_Sem4.sourcelink.json
 A:\Users\Jasper\RiderProjects\JIPP_Projekt_Sem4\JIPP_Projekt_Sem4\obj\Debug\net9.0\JIPP_Pro.D85957D8.Up2Date
 A:\Users\Jasper\RiderProjects\JIPP_Projekt_Sem4\JIPP_Projekt_Sem4\obj\Debug\net9.0\JIPP_Projekt_Sem4.dll
 A:\Users\Jasper\RiderProjects\JIPP_Projekt_Sem4\JIPP_Projekt_Sem4\obj\Debug\net9.0\refint\JIPP_Projekt_Sem4.dll
 A:\Users\Jasper\RiderProjects\JIPP_Projekt_Sem4\JIPP_Projekt_Sem4\obj\Debug\net9.0\JIPP_Projekt_Sem4.pdb
 A:\Users\Jasper\RiderProjects\JIPP_Projekt_Sem4\JIPP_Projekt_Sem4\obj\Debug\net9.0\JIPP_Projekt_Sem4.genruntimeconfig.cache
 A:\Users\Jasper\RiderProjects\JIPP_Projekt_Sem4\JIPP_Projekt_Sem4\obj\Debug\net9.0\ref\JIPP_Projekt_Sem4.dll
-A:\Users\Jasper\RiderProjects\JIPP_Projekt_Sem4\JIPP_Projekt_Sem4\obj\Debug\net9.0\JIPP_Projekt_Sem4.sourcelink.json

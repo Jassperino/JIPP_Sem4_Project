@@ -29,11 +29,13 @@ public partial class MainWindowViewModel : ViewModelBase
         Users.Clear();
         
         var sb = new StringBuilder();
+        
+        sb.AppendLine($"{"Id",-10} {"Username",-20} {"Password"}");
 
         foreach (var user in usersData)
         {
             Users.Add(user);
-            sb.AppendLine($"Id: {user.Id}, Username: {user.Username}, Password: {user.Password}");
+            sb.AppendLine($"{user.Id,-10} {user.Username,-20} {user.Password}");
         }
 
         ResultLabel = sb.ToString();

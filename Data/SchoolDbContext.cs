@@ -21,11 +21,13 @@ public class SchoolDbContext : DbContext
     
     public DbSet<User> Users { get; set; } = null!;
     public DbSet<UserGroup> UserGroups { get; set; } = null!;
+    public DbSet<Cryptocurrency> Cryptocurrencies { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
         modelBuilder.ApplyConfiguration(new UserConfiguration());
         modelBuilder.ApplyConfiguration(new UserGroupConfiguration());
+        modelBuilder.ApplyConfiguration(new CryptocurrencyConfiguration());
     }
 }    
