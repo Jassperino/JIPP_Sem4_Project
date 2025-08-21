@@ -1,9 +1,9 @@
 using System;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using JIPP_Projekt.ViewModels;
+using JIPP_Projekt_Sem4.ViewModels;
 
-namespace JIPP_Projekt;
+namespace JIPP_Projekt_Sem4;
 
 public class ViewLocator : IDataTemplate
 {

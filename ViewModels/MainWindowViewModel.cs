@@ -5,16 +5,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using JIPP_Projekt_Sem4.Models;
-using JIPP_Projekt.Data;
+//using JIPP_Projekt_Sem4.Models;
+using JIPP_Projekt_Sem4.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace JIPP_Projekt.ViewModels;
+namespace JIPP_Projekt_Sem4.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {
-
+    
     public ObservableCollection<User> Users { get; } = [];
     public ObservableCollection<Cryptocurrency> Cryptocurrencies { get; } = [];
+    
+    [ObservableProperty] private bool isUsersView;
+    [ObservableProperty] private bool isCryptosView;
+
+    partial void OnIsUsersViewChanged(bool value) => IsCryptosView = !value;
     
     [ObservableProperty]
     private IEnumerable? _displayItems;
@@ -30,14 +36,9 @@ public partial class MainWindowViewModel : ViewModelBase
             .ToListAsync();
         
         Users.Clear();
-        Cryptocurrencies.Clear();
- 
-        foreach (var user in usersData)
-        {
-            Users.Add(user);
-        }
-
-        DisplayItems = Users;
+        foreach (var user in usersData) Users.Add(user);
+        
+        IsUsersView = true;
     }
 
     public async Task UpdateCryptocurrenciesAsync()
@@ -50,16 +51,11 @@ public partial class MainWindowViewModel : ViewModelBase
             .OrderBy(c => c.User.Username)
             .ToListAsync();
 
-        Users.Clear();
         Cryptocurrencies.Clear();
-
-
-        foreach (var crypto in cryptocurrencyData)
-        {
-            Cryptocurrencies.Add(crypto);
-        }
+        foreach (var cryptocurrency in cryptocurrencyData) Cryptocurrencies.Add(cryptocurrency);
         
-        DisplayItems = Cryptocurrencies;
+        IsUsersView = false; 
+
     }
 
 

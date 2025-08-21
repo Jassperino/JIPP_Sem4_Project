@@ -4,10 +4,10 @@ using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
 using System.Linq;
 using Avalonia.Markup.Xaml;
-using JIPP_Projekt.ViewModels;
-using JIPP_Projekt.Views;
+using JIPP_Projekt_Sem4.ViewModels;
+using JIPP_Projekt_Sem4.Views;
 
-namespace JIPP_Projekt;
+namespace JIPP_Projekt_Sem4;
 
 public partial class App : Application
 {

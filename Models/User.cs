@@ -9,6 +9,7 @@ public class User
     public required string Username { get; set; }
     public required string Password { get; set; }
     public DateTime? Birthday { get; set; }
+    public string BirthdayDisplay => Birthday?.ToString("yyyy-MM-dd") ?? "-";
     public List<UserGroup> Groups { get; } = [];
     
     public Cryptocurrency? Cryptocurrency { get; set; }

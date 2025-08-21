@@ -2,7 +2,7 @@ using JIPP_Projekt_Sem4.Models;
 using JIPP_Projekt_Sem4.Models.Configurations;
 using Microsoft.EntityFrameworkCore;
 
-namespace JIPP_Projekt.Data;
+namespace JIPP_Projekt_Sem4.Data;
 
 public class SchoolDbContext : DbContext
 {

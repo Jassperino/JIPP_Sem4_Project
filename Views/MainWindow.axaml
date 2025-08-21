@@ -1,10 +1,10 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:JIPP_Projekt.ViewModels"
+        xmlns:vm="using:JIPP_Projekt_Sem4.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="450"
-        x:Class="JIPP_Projekt.Views.MainWindow"
+        x:Class="JIPP_Projekt_Sem4.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/clicker.png"
         Title="JIPP_Projekt">
@@ -16,10 +16,48 @@
     </Design.DataContext>
     
     <Grid ColumnDefinitions="1*,1*,1*,1*" ShowGridLines="True" RowDefinitions="1*,1*,1*">
+        
+        <!-- Wyświetl użytkownika -->
+        
         <Button Name="ClickBtn" Click="ClickBtn_Clicked" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Background="Aquamarine" FontWeight="Bold" FontSize="20">Wyświetl użytkowników</Button>
+        
+        <!-- Wyświetl kryptowaluty -->
+        
         <Button Name="CryptoBtn" Click="CryptoBtn_Clicked" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" Background="Aquamarine" FontWeight="Bold" FontSize="20">Wyświetl kryptowaluty</Button>
-        <DataGrid Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" ItemsSource="{Binding DisplayItems}" AutoGenerateColumns="True" CanUserResizeColumns="True" />
+        
+        <!-- USERS -->
+        <DataGrid Grid.Column="1" Grid.Row="1"
+                  ItemsSource="{Binding Users}"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  CanUserResizeColumns="True"
+                  IsVisible="{Binding IsUsersView}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id"        Binding="{Binding Id}" />
+                <DataGridTextColumn Header="Username"  Binding="{Binding Username}" />
+                <DataGridTextColumn Header="Password"  Binding="{Binding Password}" />
+                <DataGridTextColumn Header="Birthday"  Binding="{Binding BirthdayDisplay, StringFormat={}{0:yyyy-MM-dd}}" />
+            </DataGrid.Columns>
+        </DataGrid>
 
+        <!-- CRYPTOS -->
+        <DataGrid Grid.Column="2" Grid.Row="1"
+                  ItemsSource="{Binding Cryptocurrencies}"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  CanUserResizeColumns="True"
+                  IsVisible="{Binding IsCryptosView}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="UserId"    Binding="{Binding User.Id}" />
+                <DataGridTextColumn Header="Id"        Binding="{Binding Id}" />
+                <DataGridTextColumn Header="User"      Binding="{Binding User.Username}" />
+                <DataGridTextColumn Header="Bitcoin"   Binding="{Binding Bitcoin,  StringFormat={}{0:F2}}" />
+                <DataGridTextColumn Header="Ethereum"  Binding="{Binding Ethereum, StringFormat={}{0:F2}}" />
+                <DataGridTextColumn Header="Tether"    Binding="{Binding Tether,   StringFormat={}{0:F2}}" />
+                <DataGridTextColumn Header="ZCash"     Binding="{Binding ZCash,    StringFormat={}{0:F2}}" />
+            </DataGrid.Columns>
+        </DataGrid> 
+        
     </Grid>
     
 

@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using System;
 
-namespace JIPP_Projekt;
+namespace JIPP_Projekt_Sem4;
 
 sealed class Program
 {
