@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JIPP_Projekt_Sem4")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+515d52258a56102ce879324f06c30f0a7a640efd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b211c3022558af75895adcb7e389592465d5fc3")]
 [assembly: System.Reflection.AssemblyProductAttribute("JIPP_Projekt_Sem4")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JIPP_Projekt_Sem4")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
