@@ -4,7 +4,9 @@
     <option name="projectPerEditor">
       <map>
         <entry key="App.axaml" value="JIPP_Projekt_Sem4.csproj" />
+        <entry key="Views/CryptoEditWindow.axaml" value="JIPP_Projekt_Sem4.csproj" />
         <entry key="Views/MainWindow.axaml" value="JIPP_Projekt_Sem4.csproj" />
+        <entry key="Views/UserEditWindow.axaml" value="JIPP_Projekt_Sem4.csproj" />
       </map>
     </option>
   </component>

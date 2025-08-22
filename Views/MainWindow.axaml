@@ -15,18 +15,18 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
     
-    <Grid ColumnDefinitions="1*,1*,1*,1*" ShowGridLines="True" RowDefinitions="1*,1*,1*">
+    <Grid ColumnDefinitions="1*,1*" ShowGridLines="True" RowDefinitions="1*,1*">
         
         <!-- Wyświetl użytkownika -->
         
-        <Button Name="ClickBtn" Click="ClickBtn_Clicked" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Background="Aquamarine" FontWeight="Bold" FontSize="20">Wyświetl użytkowników</Button>
+        <Button Name="ClickBtn" Click="ClickBtn_Clicked" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" Background="Purple" FontWeight="Bold" FontSize="20">Wyświetl użytkowników</Button>
         
         <!-- Wyświetl kryptowaluty -->
         
-        <Button Name="CryptoBtn" Click="CryptoBtn_Clicked" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" Background="Aquamarine" FontWeight="Bold" FontSize="20">Wyświetl kryptowaluty</Button>
+        <Button Name="CryptoBtn" Click="CryptoBtn_Clicked" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Background="Purple" FontWeight="Bold" FontSize="20">Wyświetl kryptowaluty</Button>
         
         <!-- USERS -->
-        <DataGrid Grid.Column="1" Grid.Row="1"
+        <DataGrid Grid.Column="0" Grid.Row="1"
                   ItemsSource="{Binding Users}"
                   AutoGenerateColumns="False"
                   IsReadOnly="True"
@@ -37,11 +37,18 @@
                 <DataGridTextColumn Header="Username"  Binding="{Binding Username}" />
                 <DataGridTextColumn Header="Password"  Binding="{Binding Password}" />
                 <DataGridTextColumn Header="Birthday"  Binding="{Binding BirthdayDisplay, StringFormat={}{0:yyyy-MM-dd}}" />
+                <DataGridTemplateColumn Header="Akcje">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Edytuj" Click="EditUser_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
 
         <!-- CRYPTOS -->
-        <DataGrid Grid.Column="2" Grid.Row="1"
+        <DataGrid Grid.Column="1" Grid.Row="1"
                   ItemsSource="{Binding Cryptocurrencies}"
                   AutoGenerateColumns="False"
                   IsReadOnly="True"
@@ -55,6 +62,13 @@
                 <DataGridTextColumn Header="Ethereum"  Binding="{Binding Ethereum, StringFormat={}{0:F2}}" />
                 <DataGridTextColumn Header="Tether"    Binding="{Binding Tether,   StringFormat={}{0:F2}}" />
                 <DataGridTextColumn Header="ZCash"     Binding="{Binding ZCash,    StringFormat={}{0:F2}}" />
+                <DataGridTemplateColumn Header="Akcje">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Edytuj" Click="EditCrypto_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid> 
         
