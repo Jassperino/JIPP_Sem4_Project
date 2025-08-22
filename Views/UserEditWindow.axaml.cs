@@ -29,8 +29,20 @@ public partial class UserEditWindow : Window
             entity.Username = UsernameBox.Text ?? string.Empty;
             entity.Password = PasswordBox.Text ?? string.Empty;
             entity.Birthday = BirthdayPicker.SelectedDate?.DateTime;
-            await dbContext.SaveChangesAsync();
         }
+        else
+        {
+            var newUser = new User
+            {
+                Id = 0,
+                Username = UsernameBox.Text ?? string.Empty,
+                Password = PasswordBox.Text ?? string.Empty,
+                Birthday = BirthdayPicker.SelectedDate?.DateTime
+            };
+            dbContext.Users.Add(newUser);
+        }
+
+        await dbContext.SaveChangesAsync();
         Close(true);
     }
 
